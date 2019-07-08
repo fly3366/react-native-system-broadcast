@@ -62,6 +62,7 @@ RroadCast.unSnyc();//Place use it on APP has stopped
 RroadCast.sendBroadCast(action,json);//json need to like this.eg. {key:value,nokey:novalue}
 RroadCast.on(action);//Connect action from native to react event system
 RroadCast.remove(action);//Disconnect action from native to react event system
+RroadCast.removeAll();//Place use it on APP has stopped
 ...
 DeviceEventEmiter.addEventListener(action,(dataFromExtras)=>{
     //do something
