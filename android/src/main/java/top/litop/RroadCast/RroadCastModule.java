@@ -82,13 +82,11 @@ public class RroadCastModule extends ReactContextBaseJavaModule {
     Activity mActivity = getCurrentActivity();
 
     receiveBroadCast rb = new receiveBroadCast();
-    IntentFilter dmcFilterL = new IntentFilter();
 
 
 
     public void ON() {
-        dmcFilterL.addAction("SaturnLoc");
-        getReactApplicationContext().registerReceiver(rb, dmcFilterL);
+        getReactApplicationContext().registerReceiver(rb);
 
     }
 
