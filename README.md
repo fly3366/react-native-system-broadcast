@@ -57,9 +57,15 @@ NOT support
 ```javascript
 import RroadCast from 'react-native-system-broadcast';
 ...
-RroadCast.on();//You can reveice native broadcast in react event system
-RroadCast.off();//Place use it on APP has stopped
+RroadCast.sync();//You can reveice all native system broadcast in react event system
+RroadCast.unSnyc();//Place use it on APP has stopped
 RroadCast.sendBroadCast(action,json);//json need to like this.eg. {key:value,nokey:novalue}
+RroadCast.on(action);//Connect action from native to react event system
+RroadCast.remove(action);//Disconnect action from native to react event system
+...
+DeviceEventEmiter.addEventListener(action,(dataFromExtras)=>{
+    //do something
+})
 ...
 ```
 ## Warning

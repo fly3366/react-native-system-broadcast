@@ -4,11 +4,17 @@ var RNBroadCast = {
     sendBroadCast: function(action,json) {
         NativeModules.RNBroadCast.sendEvent(action,JSON.stringify(json));
     },
-    on: function() {
-        NativeModules.RNBroadCast.receiveEvent(true);
+    sync: function () {
+        NativeModules.RNBroadCast.receiveSystemEvent(true);
     },
-    off: function() {
-        NativeModules.RNBroadCast.receiveEvent(false);
+    unSync: function () {
+        NativeModules.RNBroadCast.receiveSystemEvent(false);
+    },
+    on: function (action) {
+        NativeModules.RNBroadCast.receiveEvent(action);
+    },
+    remove: function (action) {
+        NativeModules.RNBroadCast.removeEvent(action);
     }
 };
 
