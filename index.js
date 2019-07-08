@@ -21,7 +21,7 @@ var RNBroadCast = {
             return null
         else
             NativeModules.RNBroadCast.removeEvent(action);
-    }
+    },
     removeAll: function () {
         if (action == null)
             return null
