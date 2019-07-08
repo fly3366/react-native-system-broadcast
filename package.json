@@ -1,0 +1,26 @@
+{
+  "name": "react-native-system-broadcast",
+  "version": "0.1.15",
+  "description": "A react-native module for connect to broadcast of native.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fly3366/react-native-system-broadcast.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "android",
+    "ios",
+    "broadcast"
+  ],
+  "author": "fly3366",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/fly3366/react-native-system-broadcast/issues"
+  },
+  "homepage": "https://github.com/fly3366/react-native-system-broadcast#readme"
+}
