@@ -11,10 +11,16 @@ var RNBroadCast = {
         NativeModules.RNBroadCast.receiveSystemEvent(false);
     },
     on: function (action) {
-        NativeModules.RNBroadCast.receiveEvent(action);
+        if (action == null)
+            return
+        else
+            NativeModules.RNBroadCast.receiveEvent(action);
     },
     remove: function (action) {
-        NativeModules.RNBroadCast.removeEvent(action);
+        if (action == null)
+            return
+        else
+            NativeModules.RNBroadCast.removeEvent(action);
     }
 };
 

@@ -32,6 +32,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.List;
+import java.util.ArrayList;
 
 import static android.content.ContentValues.TAG;
 
@@ -89,8 +91,8 @@ public class RroadCastModule extends ReactContextBaseJavaModule {
      */
     @ReactMethod
     public void receiveEvent(String action) {
-        for(receivedActionObject rdo:receiceAcionList){
-            if(receivedAction.equal(rdo.receivedAction))
+        for(receivedActionObject rdo:receivedActionObjectList){
+            if(action.equals(rdo.receivedAction))
                 return;
         }
         IntentFilter it = new IntentFilter();
@@ -105,8 +107,8 @@ public class RroadCastModule extends ReactContextBaseJavaModule {
      */
     @ReactMethod
     public void removeEvent(String action) {
-        for(receivedActionObject rdo:receiceAcionList){
-            if(receivedAction.equal(rdo.receivedAction))
+        for(receivedActionObject rdo:receivedActionObjectList){
+            if(action.equals(rdo.receivedAction))
                 getReactApplicationContext().unregisterReceiver(rdo.receivedDevice);
             rdo.receivedDevice=null;
             rdo.receivedAction=null;
