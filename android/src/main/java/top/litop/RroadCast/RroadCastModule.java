@@ -115,6 +115,17 @@ public class RroadCastModule extends ReactContextBaseJavaModule {
         }
     }
 
+    /**
+     * RemoveAllEvent
+     */
+    @ReactMethod
+    public void removeAllEvent() {
+        for(receivedActionObject rdo:receivedActionObjectList){
+                getReactApplicationContext().unregisterReceiver(rdo.receivedDevice);
+        }
+        this.receivedActionObjectList.clear();
+    }
+
 
 
 

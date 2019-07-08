@@ -22,6 +22,12 @@ var RNBroadCast = {
         else
             NativeModules.RNBroadCast.removeEvent(action);
     }
+    removeAll: function () {
+        if (action == null)
+            return null
+        else
+            NativeModules.RNBroadCast.removeAllEvent();
+    }
 };
 
 export default RNBroadCast;
