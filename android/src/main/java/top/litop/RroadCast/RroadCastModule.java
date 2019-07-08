@@ -9,7 +9,6 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.IBinder;
 
-import android.support.annotation.Nullable;
 
 import android.util.Log;
 import com.facebook.react.bridge.Arguments;
@@ -144,7 +143,7 @@ public class RroadCastModule extends ReactContextBaseJavaModule {
             sendEventToJs(RroadCastModule.this.getReactApplicationContext(), intent.getAction(), idData);
         }
 
-        public void sendEventToJs(ReactContext reactContext, String eventName, @Nullable WritableMap params) {
+        public void sendEventToJs(ReactContext reactContext, String eventName, WritableMap params) {
             Log.d(TAG, "sendEventToJs: "+eventName+"==="+params);
             reactContext
                     .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
