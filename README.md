@@ -21,7 +21,7 @@ Or manual: add the latest version as dependeny to your package.json.
   },
   "dependencies": {
     ...
-    "react-native-system-broadcast": "0.1.0",
+    "react-native-system-broadcast": "^0.1.20",
     ...
   }
 ```
@@ -62,6 +62,9 @@ RroadCast.off();//Place use it on APP has stopped
 RroadCast.sendBroadCast(action,json);//json need to like this.eg. {key:value,nokey:novalue}
 ...
 ```
+## Warning
+
+This plugin NOT safe for something like broadcast with permission.
 
 ## Versioning
 
