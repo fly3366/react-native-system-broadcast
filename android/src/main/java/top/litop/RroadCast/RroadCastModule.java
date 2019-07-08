@@ -85,7 +85,7 @@ public class RroadCastModule extends ReactContextBaseJavaModule {
 
 
     public void ON() {
-        getReactApplicationContext().registerReceiver(rb);
+        getReactApplicationContext().registerReceiver(rb,null);
 
     }
 
