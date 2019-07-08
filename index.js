@@ -12,13 +12,13 @@ var RNBroadCast = {
     },
     on: function (action) {
         if (action == null)
-            return
+            return null
         else
             NativeModules.RNBroadCast.receiveEvent(action);
     },
     remove: function (action) {
         if (action == null)
-            return
+            return null
         else
             NativeModules.RNBroadCast.removeEvent(action);
     }
